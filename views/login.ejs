@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login | E-Shopper</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 ">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href=""><i class="fa fa-phone"></i>  Hotline: +84 982 004216</a></li>
+								<li><a href=""><i class="fa fa-envelope"></i>  huynhhanthanh1997@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+								<li><a href=""><i class="fa fa-dribbble"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="http://localhost:3000/"><img src="images/shop/logo.jpg" alt="" width="139" height="39"/></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href=""><i class="fa fa-user"></i> Đăng Kí</a></li>
+								<li><a href="http://localhost:3000/login"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div  class="mainmenu pull-left" >
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="http://localhost:3000/" class="active">Trang Chủ</a></li>
+								<li class="dropdown"><a href="#" class="active">Cửa Hàng <i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+										<li><a href="http://localhost:3000/chitiet" class="active">Chi tiết Sản Phẩm</a></li>   
+										<li><a href="http://localhost:3000/login" class="active">Đăng Nhập </a></li> 
+                                    </ul>
+                                </li>  
+								<li><a href="http://localhost:3000/lienhe" class="active">Liên Hệ  </a></li>
+                                <li><a  class="active" href="http://localhost:3000/thietke">Thiết Kế Áo </a></li>
+                                <li><a  class="active"> Tuyển Dụng </a></li>
+                                <li><a  class="active"> Dịch Vụ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Tìm kiếm"/>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+	</header><!--/header-->
+	
+	<section id="form"><!--form-->
+		<div class="container">
+			<div class="row" id="body">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="login-form"><!--login form-->
+						<h2>Đăng nhập tài khoản của bạn </h2>
+						<form class="" action="/login" method="post">
+							<input type="text" placeholder="User name" name="username"/>
+							<input type="password" placeholder="Password" name="password" />
+							<span>
+								<input type="checkbox" class="checkbox"> 
+								Lưu đăng nhập 
+							</span>
+							<button type="submit" class="btn btn-default" value="Login">Đăng Nhập </button>
+						</form>
+					</div><!--/login form-->
+				</div>
+			</div>
+		</div>
+	</section><!--/form-->
+	
+	
+	<footer id="footer"><!--Footer-->
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="single-widget">
+							<h2>SHOP THỜI TRANG ONLINE </h2>
+							<h2><i class="fa fa-location-arrow"></i> VP:Tầng 16 - CC Phú Đạt - Đường D5 - P 25 - Q.Bình Thạnh TP.HCM</h2>
+							<h2><i class="fa fa-phone"></i>0933222836</h2>
+							<h2><i class="fa fa-mail-forward"></i>Mail</h2>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>chính sách bảo mật</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">chính sách đổi trả</a></li>
+								<li><a href="#">chính sách bảo hành </a></li>
+								<li><a href="#">chính sách thanh toán</a></li>
+								<li><a href="#">chính sách vận chuyển</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2> Hướng dẫn mua hàng </h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">chính sách đổi trả</a></li>
+								<li><a href="#">chính sách bảo hành </a></li>
+								<li><a href="#">chính sách thanh toán</a></li>
+								<li><a href="#">chính sách vận chuyển</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2> <a href="https://www.facebook.com/son.vuong.7505"> Facebook</a></h2>
+							<img src="images/shop/facebook.png" width="270">
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+  
+    <script src="js/jquery.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

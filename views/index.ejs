@@ -1,0 +1,925 @@
+<!DOCTYPE ejs>
+<ejs lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> C-Fashion.VN </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/ejs5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 ">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href=""><i class="fa fa-phone"></i>  Hotline: +84 982 004216</a></li>
+								<li><a href=""><i class="fa fa-envelope"></i>  huynhhanthanh1997@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+							  	<li><a href="https://www.facebook.com/son.vuong.7505"><i class="fa fa-facebook"></i></a></li>
+							  	<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+								<li><a href=""><i class="fa fa-dribbble"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.ejs"><img src="images/shop/logo.jpg" alt="" width="200" height="39"/></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+							  <li><a><em class="fa fa-user"></em> Đăng kí </a></li>
+							  <li><a href="login.ejs"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div  class="mainmenu pull-left" >
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="http://localhost:3000/" class="active">Trang chủ </a></li>
+								<li class="dropdown"><a href="#" class="active">Cửa Hàng <i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+										<li><a href="http://localhost:3000/chitiet" class="active">Chi tiết Sản Phẩm</a></li>   
+										<li><a href="http://localhost:3000/login" class="active">Đăng Nhập </a></li> 
+                                    </ul>
+                                </li>  
+								<li><a href="http://localhost:3000/lienhe" class="active">Liên Hệ  </a></li>
+                                <li><a  class="active" href="http://localhost:3000/thietke">Thiết Kế Áo </a></li>
+                                <li><a  class="active"> Tuyển Dụng </a></li>
+                                <li><a  class="active"> Dịch Vụ</a></li>
+                                <li><a  class="active"> Sản Phẩm  </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Tìm kiếm"/>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+	</header>
+	
+	<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-3">
+									<h1><span>C</span>-FASHION</h1>
+									<h2>Giá cả hợp lý phù hợp với mọi lứa tuổi về thời trang </h2>
+									<button type="button" class="btn btn-default get"> Mua Ngay</button>
+								</div>
+								<div class="col-sm-9">
+									<img src="images/shop/template1.jpg"  width="900"  height="473" > 
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-3">
+								  	<h1><span>C</span>-FASHION</h1>
+									<h2>Thiết kế ứng ý phù hợp với mọi lứa tuổi </h2>
+									<button type="button" class="btn btn-default get"> Mua Ngay</button>
+								</div>
+								<div class="col-sm-9">
+									<img src="images/shop/template2.jpg" width="900" height="473">
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="col-sm-3 ">
+									<h1><span>C</span>-FASHION</h1>
+									<h2>Thiết kế áo thoái mái sản khoái</h2>
+									<button type="button" class="btn btn-default get"> Mua Ngay </button>
+								</div>
+								<div class="col-sm-9">
+									<img src="images/shop/template3.jpg" width="900"  height="473">
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2">
+					<div class="left-sidebar">
+						<h2>Thể Loại</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+							<div class="panel panel-default">
+								<div id="sportswear" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="">Nike </a></li>
+											<li><a href="">Under Armour </a></li>
+											<li><a href="">Adidas </a></li>
+											<li><a href="">Puma</a></li>
+											<li><a href="">ASICS </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+											<span class="badge pull-right"></span>
+											Nam
+										</a>
+									</h4>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"></span>
+											Nữ
+										</a>
+									</h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Trẻ em</a></h4>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"></span>
+											Người lớn 
+										</a>
+									</h4>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"></span>
+											Người già 
+										</a>
+									</h4>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"></span>
+											Nghệ sĩ 
+										</a>
+									</h4>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"></span>
+											Các đối tượng khác
+										</a>
+									</h4>
+								</div>
+							</div>
+						</div><!--/category-productsr-->
+					
+						<div class="brands_products"><!--brands_products-->
+							<h2>Nhã hiệu </h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href=""> <span class="pull-right">(50)</span>Việt Tiến</a></li>
+									<li><a href=""> <span class="pull-right">(56)</span>Adam Store</a></li>
+									<li><a href=""> <span class="pull-right">(27)</span>GUCCI </a></li>
+									<li><a href=""> <span class="pull-right">(32)</span>Nike</a></li>
+									<li><a href=""> <span class="pull-right">(5)</span>Chanels</a></li>
+									<li><a href=""> <span class="pull-right">(9)</span>An Phước</a></li>
+									<li><a href=""> <span class="pull-right">(4)</span>Owen </a></li>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+						
+						<div class="shipping text-center"><!--shipping-->
+							<img src="images/home/shipping.jpg" alt="" width="170" height="400"/>
+						</div><!--/shipping-->
+						
+						<div class="shipping text-center"><!--shipping-->
+							<img src="images/home/shipping1.jpg" alt="" width="170" height="400"/>
+						</div><!--/shipping-->
+						
+						<div class="shipping text-center"><!--shipping-->
+							<img src="images/home/shipping2.jpg" alt="" width="170" height="400"/>
+						</div><!--/shipping-->
+					</div>
+				</div>
+				
+				<div class="col-sm-10 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Sản phẩm Hot trend</h2>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/clothes (7).jpg" alt="" />
+										<h2>89K</h2>
+										<p>Áo thun sành điệu </p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+									</div>
+							  </div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+									  <li><a href="#"><em class="fa fa-plus-square "></em>thêm vào danh sách </a></li>
+									  <li><a href="#"><i class="fa fa-plus-square "></i>thêm để so sánh </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/clothes (2).jpg" alt="" />
+										<h2>56k</h2>
+										<p>Áo thun sành điệu </p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm vào danh sách </a></li>
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm để so sánh </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/clothes (3).jpg" alt="" />
+										<h2>56k</h2>
+										<p>Áo thun sành điệu </p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm vào danh sách </a></li>
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm để so sánh </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/clothes (4).jpg" alt="" />
+										<h2>$56</h2>
+										<p>Áo thun sành điệu </p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+									</div>
+									<img src="images/home/new.png" class="new" alt="" />
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm vào danh sách </a></li>
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm để so sánh </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/clothes (5).jpg" alt="" />
+										<h2>56k</h2>
+										<p>Áo thun sành điệu </p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+									</div>
+									<img src="images/home/sale.png" class="new" alt="" />
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm vào danh sách </a></li>
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm để so sánh </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/clothes (6).jpg" alt="" />
+										<h2>56k</h2>
+										<p>Áo thun sành điệu </p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm vào danh sách </a></li>
+										<li><a href="#"><i class="fa fa-plus-square "></i>thêm để so sánh </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div><!--features_items-->
+					
+					<div class="category-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#tshirt" data-toggle="tab">áo Thun</a></li>
+								<li><a href="#blazers" data-toggle="tab">Áo Khoác</a></li>
+								<li><a href="#sunglass" data-toggle="tab">Mắt kính </a></li>
+								<li><a href="#kids" data-toggle="tab">Trẻ em </a></li>
+								<li><a href="#poloshirt" data-toggle="tab">áo thun có cổ </a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="tshirt" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (7).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (8).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (9).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (10).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (10).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (10).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (10).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (10).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+							<div class="tab-pane fade" id="sunglass" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>$56</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="kids" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="poloshirt" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="poloshirt" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/clothes (1).jpg" alt="" />
+												<h2>56k</h2>
+												<p>Áo thun sành điệu </p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!--/category-tab-->
+					
+					<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">recommended items</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="item active">	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/clothes (1).jpg" alt="" />
+													<h2>56k</h2>
+													<p>Áo thun sành điệu </p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/clothes (1).jpg" alt="" />
+													<h2>56k</h2>
+													<p>Áo thun sành điệu </p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/clothes (1).jpg" alt="" />
+													<h2>56k</h2>
+													<p>Áo thun sành điệu </p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/clothes (1).jpg" alt="" />
+													<h2>56k</h2>
+													<p>Áo thun sành điệu </p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/clothes (1).jpg" alt="" />
+													<h2>56K</h2>
+													<p>Áo thun sành điệu </p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/clothes (1).jpg" alt="" />
+													<h2>56k<h6></h6></h2>
+													<p>Áo thun sành điệu </p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Thêm vào giỏ</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							  </a>
+							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							  </a>			
+						</div>
+					</div><!--/recommended_items-->
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer id="footer"><!--Footer-->
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="single-widget">
+							<h2>SHOP THỜI TRANG ONLINE </h2>
+							<h2><i class="fa fa-location-arrow"></i> VP:Tầng 16 - CC Phú Đạt - Đường D5 - P 25 - Q.Bình Thạnh TP.HCM</h2>
+							<h2><i class="fa fa-phone"></i>0933222836</h2>
+							<h2><i class="fa fa-mail-forward"></i>Mail</h2>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>chính sách bảo mật</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">chính sách đổi trả</a></li>
+								<li><a href="#">chính sách bảo hành </a></li>
+								<li><a href="#">chính sách thanh toán</a></li>
+								<li><a href="#">chính sách vận chuyển</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2> Hướng dẫn mua hàng </h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">chính sách đổi trả</a></li>
+								<li><a href="#">chính sách bảo hành </a></li>
+								<li><a href="#">chính sách thanh toán</a></li>
+								<li><a href="#">chính sách vận chuyển</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2> <a href="https://www.facebook.com/son.vuong.7505"> Facebook</a></h2>
+							<img src="images/shop/facebook.png" width="270">
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+  
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</ejs>

@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+.icon{
+	font-size: 15px ; 
+	color: #D44545 ; 
+	
+}
+
+.icon:hover .social-newok{
+	background-color: #B5ADAD; 
+	display: block ; 
+}
+
+.controls{
+	margin-left: 0 ; 
+	padding-left: 0; 
+}
+
+.edit ul li a {
+	padding: inherit ;
+	padding-left: 0px; 
+	padding-right: 20px ;
+	font-size: 15px ; 
+	color: #D44545 ; 
+	visibility: visible ; 
+	position: relative ;
+}
+
+.edit ul li a:hover{
+	background-color: #B49798 ;
+}

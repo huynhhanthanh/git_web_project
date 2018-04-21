@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+<script type="text/javascript">
+function prepHref(linkElement) {
+    var myDiv = document.getElementById('fullsized_image_holder');
+    var myImage = myDiv.children[0];
+    linkElement.href = myImage.src;
+}
+</script>
+</head>
+<body>
+
+<img src="images/home/clothes (7).jpg" style="margin-top: 0px;" class="fullsized_image_holder">
+<img src="images/home/clothes (7).jpg" style="margin-top: 0px;" class="fullsized_image_holder">
+<a href="#" onclick="prepHref(this)" download>Click here to download image</a>
+</body>
+</html>

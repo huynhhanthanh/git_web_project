@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shop | C-Fashion</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+   	<link href="css/style-design.css" rel="stylesheet">
+   	<link href="js/designe.js" type="text/javascript"> 
+   	
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    
+    
+    
+	
+	<script>
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+		
+		var loadFile = function(event) {
+			var reader = new FileReader();
+			reader.onload = function(){
+			  var output = document.getElementById('output');
+			  output.src = reader.result;
+			};
+			reader.readAsDataURL(event.target.files[0]);
+		 };
+		
+		
+		function addListeners() {
+			document.getElementById('output').addEventListener('mousedown', mouseDown, false);
+			window.addEventListener('mouseup', mouseUp, false);
+		}
+
+		function mouseUp() {
+			window.removeEventListener('mousemove', divMove, true);
+		}
+
+		function mouseDown() {
+			window.addEventListener('mousemove', divMove, true);
+		}
+
+		function divMove(e){
+			var x ,y ;
+			x = e.clientX - 350; 
+			y = e.clientY - 370; 
+			document.getElementById('output').style.top = y + 'px' ; 
+			document.getElementById('output').style.left = x + 'px' ; 
+		}
+		
+
+		addListeners();
+		
+		
+		function modal (){
+			var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+			var btn = document.getElementById('myBtn');
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+				modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		}
+		
+		
+		function addText(){
+			var canvas = document.getElementById('canvas'),
+			ctx = canvas.getContext('2d');
+			canvas.width = $('img').width();
+			canvas.crossOrigin = "Anonymous";
+			canvas.height = $('img').height();
+			ctx.drawImage($('img').get(0), 0, 0);
+			ctx.font = "36pt Verdana";
+			$(document).on('input','#inp',function(){
+				//redraw image
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+				ctx.drawImage($('img').get(0), 0, 0);
+				//refill text
+				ctx.fillStyle = "red";
+				ctx.fillText($(this).val(),40,80);
+			});
+			$('button').click(function(){
+				console.log(ctx.getImageData(50, 50, 100, 100));
+			});
+		}
+		
+		function prepHref(linkElement) {
+			var arrayOfIds = $.map($(".tabcontent"), function(n, i){
+			  return n.id;
+			});
+			var i ; 
+			for (i=0 ; i < arrayOfIds.length ;i++){
+				var myImage = arrayOfIds.children[i];
+				
+			}
+			linkElement.href = myImage.src ;
+		}
+	</script>
+
+// Get the modal
+</head>
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 ">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href=""><i class="fa fa-phone"></i>  Hotline: +84 982 004216</a></li>
+								<li><a href=""><i class="fa fa-envelope"></i>  huynhhanthanh1997@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+								<li><a href=""><i class="fa fa-dribbble"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="http://localhost:3000/"><img src="images/shop/logo.jpg" alt="" width="170" height="39"/></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+							  <li><a class="login-checkout-account"><em class="fa fa-user"></em> Tài Khoản</a></li>
+							  <li><a href="http://localhost:3000/login" class="login-checkout-account"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9 col-lg-8" id="navbar" >
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">Toggle navigation </button>
+						</div>
+						<div  class="mainmenu pull-left" >
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="http://localhost:3000/" class="active">Trang Chủ</a></li>
+								<li class="dropdown"><a href="#" class="active">Cửa Hàng <i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+										<li><a href="http://localhost:3000/chitiet" class="active">Chi tiết Sản Phẩm</a></li>   
+										<li><a href="http://localhost:3000/login" class="active">Đăng Nhập </a></li> 
+                                    </ul>
+                                </li>  
+								<li><a href="http://localhost:3000/lienhe" class="active">Liên Hệ  </a></li>
+                                <li><a  class="active" href="http://localhost:3000/thietke">Thiết Kế Áo </a></li>
+                                <li><a  class="active"> Tuyển Dụng </a></li>
+                                <li><a  class="active"> Dịch Vụ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Tìm kiếm"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>E</span>-SHOPPER</h1>
+									<h2>100% Responsive Design</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing.png"  class="pricing" alt="" />
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>E</span>-SHOPPER</h1>
+									<h2>Free Ecommerce Template</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing.png" class="pricing" alt="" />
+								</div>
+							</div>	
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+	
+	<section>x
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2 col-lg-2">
+					<ul class="controls">
+					  <li><a href="#" class="icon"><em class="fa fa-arrow-circle-left"></em> view back</a></li>
+					  <li><a href="#" class="icon"><i class="fa fa-search-plus"></i> zoom </a></li>
+					  <li><a href="#" class="icon"><i class="fa fa-camera-retro"></i> template</a></li>
+					  <li id="|ShareBar" class="icon">
+						<div><a id="share" href="#" class="icon"><i class="fa fa-share" aria-hidden="true"></i> share</a></div>
+						<ul class="social-newok">
+						  <li class="email"><a href="#"><i class="fa fa-envelope"></i> email</a></li>
+						  <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>twitter</a></li>
+						  <li class="facebook"><a href="#"><i class="fa fa-facebook"></i> facebook</a></li>
+						  <li class="pinterest"><a href="#" ><i class="fa fa-pinterest"></i> pinterest</a></li>
+						</ul>
+					  </li>
+					</ul>
+				</div>
+				
+				<div class="col-sm-10 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Thiết kế áo </h2>
+						<div class="col-sm-6">
+							<div class="product-image-wrapper">
+								<div class="single-products"> 
+									<div class="productinfo text-center" >
+										<img class="fish" id="output" height="50" width="50" onMouseMove="divMove()" onMouseUp="mouseUp()" onMouseDown="mouseDown(this)" onClick="addListeners()">
+										<img class="tabcontent" src="images/home/clothes (4).jpg" id="hien1" height="300" width="200">
+										<a href="#" onClick="prepHref(this)" download="download">Click here to download image</a>
+										<img class="tabcontent" src="images/home/clothes (7).jpg" id="hien2" height="300" width="200">
+										<img class="tabcontent" src="images/home/clothes (9).jpg" id="hien3" height="300" width="200">
+										<img class="tabcontent" src="images/home/clothes (30).jpg" id="hien4" height="300" width="200">
+										<img class="tabcontent" src="images/home/clothes (165).jpg" id="hien5" height="300" width="200">
+										
+										<img class="tabcontent" src="images/home/clothes (165).jpg" id="hien6" height="300" width="200">
+										
+										<img class="tabcontent" src="images/home/clothes (158).jpg" id="hien7" height="300" width="200">
+										
+										<img class="tabcontent" src="images/home/clothes (20).jpg" id="hien8" height="300" width="200">
+										
+										<img class="tabcontent" src="images/home/clothes (163).jpg" id="hien9" height="300" width="200">
+										
+										<img class="tabcontent" src="images/home/clothes (171).jpg" id="hien10" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (86).jpg" id="hien11" height="300" width="200">
+										
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (12).jpg" id="hien12" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (12).jpg" id="hien13" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (162).jpg" id="hien14" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (14).jpg" id="hien15" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (33).jpg" id="hien16" height="300" width="200">
+										
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (166).jpg" id="hien17" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (121).jpg" id="hien18" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (8).jpg" id="hien19" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (164).jpg" id="hien20" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (194).jpg" id="hien21" height="300" width="200">
+										
+										<img class="tabcontent" src="jpg/400x400/clothes (158).jpg" id="hien22" height="300" width="200">
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="container">
+							  <ul class="nav nav-tabs">
+								<li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-shield"></i> Home</a></li>
+								<li><a data-toggle="tab" href="#menu1"><em class="fa fa-camera"></em> Add Camera </a></li>
+								<li><a data-toggle="tab" href="#menu2"><em class="fa fa-text-width"></em> Text </a></li>
+								<li><a data-toggle="tab" href="#menu3"><i class="fa fa-save"></i> Save</a></li>
+							  </ul>
+
+							  <div class="tab-content">
+								<div id="home" class="tab-pane fade in active">
+								  <div id= "|EditProductPane"  class="Pane EditProductPane">
+									<a href="" class="close-icon"></a>
+									<div class="pane-content">
+									<h2><span class="productName"></span></h2>
+									
+									<div class="digitalInkContainer">
+									  <div class="header" style="color: #35BEDB"  ><h2 style="background-color: #B0B0B0">Chọn màu mà bạn muốn thay đổi</h2> </div>
+									  <div class="digitalInks"></div>
+									  <button class="button " style="background-color: rgb(255, 255, 255); " onClick="openCity(event, 'hien1')" ></button>
+									  <button class="button " style="background-color: rgb(28, 28, 28);" onClick="openCity(event, 'hien2')" ></button>
+									  <button class="button " style="background-color: rgb(176, 176, 176);" onClick="openCity(event, 'hien3')"></button>
+									  <button class="button " style="background-color: rgb(231, 116, 149);" onClick="openCity(event, 'hien4')"></button>
+									  <button class="button " style="background-color: rgb(205, 19, 80);" onClick="openCity(event, 'hien5')"></button>
+									  <button class="button " style="background-color: rgb(200, 13, 40);" onClick="openCity(event, 'hien6')"></button>
+									  <button class="button " style="background-color: rgb(80, 30, 31);" onClick="openCity(event, 'hien7')"></button>
+									  <button class="button " style="background-color: rgb(232, 112, 36);" onClick="openCity(event, 'hien8')"></button>
+									  <button class="button " style="background-color: rgb(232, 61, 9);" onClick="openCity(event, 'hien9')"></button>
+									  <button class="button " style="background-color: rgb(245, 177, 34);" onClick="openCity(event, 'hien10')"></button>
+									  <button class="button " style="background-color: rgb(150, 201, 62);" onClick="openCity(event, 'hien11')"></button>
+									  <button class="button " style="background-color: rgb(44, 139, 71);" onClick="openCity(event, 'hien12')"></button>
+									  <button class="button " style="background-color: rgb(44, 139, 71);" onClick="openCity(event, 'hien13')"></button>
+									  <button class="button " style="background-color: rgb(83, 85, 63);" onClick="openCity(event, 'hien14')"></button>
+									  <button class="button " style="background-color: rgb(166, 215, 220);" onClick="openCity(event, 'hien15')"></button>
+									  <button class="button " style="background-color: rgb(49, 141, 178);" onClick="openCity(event, 'hien16')"></button>
+									  <button class="button " style="background-color: rgb(45, 74, 130);" onClick="openCity(event, 'hien17')"></button>
+									  <button class="button " style="background-color: rgb(57, 74, 94);" onClick="openCity(event, 'hien18')"></button>
+									  <button class="button " style="background-color: rgb(40, 42, 55);" onClick="openCity(event, 'hien19')"></button>
+									  <button class="button " style="background-color: rgb(73, 31, 97);" onClick="openCity(event, 'hien20')"></button>
+									  <button class="button " style="background-color: rgb(227, 212, 183);" onClick="openCity(event, 'hien21')"></button>
+									  <button class="button " style="background-color: rgb(190, 152, 105);" onClick="openCity(event, 'hien22')"></button>
+									</div>
+									
+									<div class="btn-container"><button class="findProduct btn btn-med">Change Product</button></div>
+									<p><span class="description"></span></p>
+									</div>
+								  </div>
+								</div>
+								
+								
+								
+								
+								<div id="menu1" class="tab-pane fade">
+								  <div id="|AddImagePane" class="Pane AddImagePane">
+									<a href="#" class="close-icon"></a>
+									<div class="intro">
+									  <div class="icon-bar">
+										  <button href="#" class="active" style="background-color: #B4F767">
+										  <h2 style="font-size: 20px"><i class="fa fa-clipboard"></i>ClipArt</h2>
+										  </button> 
+										  
+										  <button href="#" id="myBtn" onClick="modal()" style="background-color: #B4F767">
+									  	  	<h2 style="font-size: 20px"><em class="fa fa-upload"></em>Upload</h2>
+									  	  </button> 
+											<div id="myModal" class="modal">
+											  <!-- Modal content -->
+											  <div class="modal-content">
+												<span class="close">&times;</span>
+												<h2 class = "tieude"> File Upload</h2>
+												<p class = "tieude" style="font-size: 14px">Bạn có thể chọn các loại file </p>
+												<p> JPG, GIF, PNG, BMP, TIF, AI, EPS, PDF, PSD </p>
+												<h2 class = "tieude" style="font-size: 14px"> Dung lượng tối đa của 1 file là 10 Mb </h2>
+												<input type="file" accept="image/*" onchange="loadFile(event)">
+											  </div>
+
+											</div>
+
+									  	   
+										  <button href="#" style="background-color: #B4F767">
+										  <h2 style="font-size: 20px"><i class="fa fa-picture-o"></i>Images</h2>
+										  </button> 
+										  
+										  
+										  
+							
+										  
+									  </div>
+									</div>
+									<div class="main">
+									  <div class="buttons">
+										
+									  </div>
+									  <div class="container"></div>
+									</div>
+								  </div>
+								</div>
+								
+								
+								<div id="menu2" class="tab-pane fade">
+								  <div id="|AddTextPane" class="Pane AddTextPane">
+									<a href="#" class="close-icon"></a>
+									  
+								  </div>
+								</div>
+								
+								
+								<div id="menu3" class="tab-pane fade">
+								  <div class="savePane">
+								  <p>Enter a name for your design and then click the save button.</p>
+								  <form class="form">
+									<input type="text" class="designNameInput" maxlength="50" placeholder="Type your design name here"/>
+								  </form>
+								  <p><span class= "notesToggle">Add special printing instructions</span></p>
+								  <textarea class="notesText" autofocusrows="4" placeholder="Enter your notes here"></textarea>
+								  <button class="saveButton btn btn-med">Save Design</button>
+								  <div class="message alert"></div>
+								</div>
+								</div>
+								
+								
+							  </div>
+						  </div>
+						</div>
+					</div><!--features_items-->
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="footer"><!--Footer-->
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="single-widget">
+							<h2>SHOP THỜI TRANG ONLINE </h2>
+							<h2><i class="fa fa-location-arrow"></i> VP:Tầng 16 - CC Phú Đạt - Đường D5 - P 25 - Q.Bình Thạnh TP.HCM</h2>
+							<h2><i class="fa fa-phone"></i>0933222836</h2>
+							<h2><i class="fa fa-mail-forward"></i>Mail</h2>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>chính sách bảo mật</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">chính sách đổi trả</a></li>
+								<li><a href="#">chính sách bảo hành </a></li>
+								<li><a href="#">chính sách thanh toán</a></li>
+								<li><a href="#">chính sách vận chuyển</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2> Hướng dẫn mua hàng </h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">chính sách đổi trả</a></li>
+								<li><a href="#">chính sách bảo hành </a></li>
+								<li><a href="#">chính sách thanh toán</a></li>
+								<li><a href="#">chính sách vận chuyển</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2> <a href="https://www.facebook.com/son.vuong.7505"> Facebook</a></h2>
+							<img src="images/shop/facebook.png" width="270">
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
