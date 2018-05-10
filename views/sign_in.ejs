@@ -21,7 +21,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	
 </head><!--/head-->
 
 <body>
@@ -89,7 +90,7 @@
 								<li><a href="http://localhost:3000/" class="active">Trang Chủ</a></li>
 								<li class="dropdown"><a href="#" class="active">Cửa Hàng <i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-										<li><a href="http://localhost:3000/chitiet" class="active">Chi tiết Sản Phẩm</a></li>   
+										<li><a href="http://localhost:3000/chitiet/1" class="active">Chi tiết Sản Phẩm</a></li>   
 										<li><a href="http://localhost:3000/login" class="active">Đăng Nhập </a></li> 
                                     </ul>
                                 </li>  
@@ -114,19 +115,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">
-					<div class="signup-form"><!--sign up form-->
+					<div class="signup-form" ><!--sign up form-->
 						<h2>Tạo tài khoản mới </h2>
-						<form action="#" method="POST" enctype="application/x-www-form-urlencoded">
+						<form action="http://localhost:3000/singin" method="POST" enctype="application/x-www-form-urlencoded" id="comment_form">
 							<label>Tên</label>
-							<input type="text" name="txtHoten" placeholder="Tên"/>
+							<input type="text" name="txtHoten" id="name" placeholder="Tên"/>
 							
 							<label>Email</label>
-							<input type="email" name="txtEmail" placeholder="Địa chỉ Email"/>
+							<input type="email" name="txtEmail" id="email" placeholder="Địa chỉ Email"/>
 							
 							<label>Mật khẩu</label>
 							<input type="password" name="txtPassword" placeholder="Mật Khẩu"/>
-		
-							
+							<label>Nhập lại Mật khẩu</label>
+							<input type="password" name="txtPassword1" placeholder="Nhập lại Mật Khẩu"/>
+
 							<label for="country">Giới Tính </label>
 							<select id="country" name="txtGioitinh">
 							  <option value="Nam ">Nam</option>
@@ -136,8 +138,11 @@
 							
 							
 							<label></label>
-							<button type="submit" class="btn btn-default">Đăng kí</button>
+							<div class="g-recaptcha" data-sitekey="6LcTllcUAAAAAM6mOT-ckpWxFKvPYaPK4SpFlN8N"></div><br>
+							<button type="submit" class="btn btn-default" id>Đăng kí</button>
 						</form>
+
+						
 					</div><!--/sign up form-->
 				</div>
 			</div>
@@ -203,13 +208,32 @@
 		
 	</footer><!--/Footer-->
 	
-
-  
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
     <script src="js/jquery.js"></script>
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+	<script src="js/main.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+	<script>
+		$(document).ready(function() {
+		  $('#comment_form').submit(function() {
+			$(this).ajaxSubmit({
+			  error: function(xhr) {
+				status('Error: ' + xhr.status);
+			  },
+			 success: function(response) {
+			  console.log(response);
+			 }
+			});
+			//Very important line, it disable the page refresh.
+			return false;
+		  });
+		});
+	</script>
 </body>
 </html>

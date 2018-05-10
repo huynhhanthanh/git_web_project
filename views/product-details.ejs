@@ -1,3 +1,14 @@
+<%
+if(parseInt(dangxem) <= 1){
+	truoc = 1 ; 
+}else{
+	truoc = parseInt(dangxem) - 1 ; 
+}
+var sau = parseInt(dangxem) + 1 ; 
+
+%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,25 +17,53 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Product Details | E-Shopper</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/css/price-range.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
+	<![endif]-->   
+	<base href="http://localhost:3000/">
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#like").click(function(){
+			var id = $(this).attr("hinh"); 
+			$.get("http://localhost:3000/like/" + id,function(data){
+				location.reload();
+			
+			}) ; 
+		});
+
+		$("#dislike").click(function(){
+			var id = $(this).attr("hinh"); 
+			$.get("http://localhost:3000/dislike/" + id,function(data){
+				location.reload();
+			}) ; 
+		});
+	});
+	</script>
+
+
+
+	
+
+
+
 </head><!--/head-->
 
 <body>
+	
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -63,7 +102,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-user"></i> Tài Khoản</a></li> 
+								<li><a href=""><i class="fa fa-user"></i> Đăng Kí</a></li> 
 								<li><a href="http://localhost:3000/login"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
 							</ul>
 						</div>
@@ -89,7 +128,7 @@
 								<li><a href="http://localhost:3000/" class="active">Trang Chủ</a></li>
 								<li class="dropdown"><a href="#" class="active">Cửa Hàng <i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-										<li><a href="http://localhost:3000/chitiet" class="active">Chi tiết Sản Phẩm</a></li>   
+										<li><a href="http://localhost:3000/chitiet/1" class="active">Chi tiết Sản Phẩm</a></li>   
 										<li><a href="http://localhost:3000/login" class="active">Đăng Nhập </a></li> 
                                     </ul>
                                 </li>  
@@ -113,7 +152,7 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-2">
 					<div class="left-sidebar">
 						<h2>Thể Loại</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
@@ -172,34 +211,50 @@
 								</ul>
 							</div>
 						</div><!--/brands_products-->
-					</div>>
+					</div>
 				</div>
 				
 				<div class="col-sm-9 padding-right">
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="images/product-details/clothes (266).jpg" alt="" />
+								<img src="images/product-details/<%=hinh%>" alt="" />
 								<h3>ZOOM</h3>
+								<div class="btn-toolbar" role="toolbar"> 						
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/1'">1</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/2'">2</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/3'">3</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/4'">4</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/5'">5</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/5'">6</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/5'">7</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/5'">8</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/5'">9</button>
+									<button type="button" class="btn-group" onclick="window.location.href='http://localhost:3000/chitiet/5'"><span class="glyphicon glyphicon-chevron-right"></span></button>
+								</div>
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
 								  <!-- Wrapper for slides -->
 								    <div class="carousel-inner">
 										<div class="item active">
-										  <a href=""><img src="images/product-details/clothes (266).jpg" alt="" width="84" height="85" ></a>
-										  <a href=""><img src="images/product-details/clothes (267).jpg" alt="" width="84" height="85"></a>
-										  <a href=""><img src="images/product-details/clothes (268).jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/1.jpg" alt="" width="84" height="85" ></a>
+										  <a href=""><img src="images/product-details/2.jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/3.jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/4.jpg" alt="" width="84" height="85"></a>
+										
 										</div>
 										<div class="item">
-										  <a href=""><img src="images/product-details/clothes (269).jpg" alt="" width="84" height="85"></a>
-										  <a href=""><img src="images/product-details/clothes (270).jpg" alt="" width="84" height="85"></a>
-										  <a href=""><img src="images/product-details/clothes (271).jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/3.jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/4.jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/5.jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/1.jpg" alt="" width="84" height="85"></a>
 										</div>
 										<div class="item">
-										  <a href=""><img src="images/product-details/clothes (266).jpg" alt="" width="84" height="85"></a>
-										  <a href=""><img src="images/product-details/clothes (266).jpg" alt=""width="84" height="85"></a>
-										  <a href=""><img src="images/product-details/clothes (266).jpg" alt=""width="84" height="85"></a>
+											<a href=""><img src="images/product-details/1.jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/2.jpg" alt="" width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/4.jpg" alt=""width="84" height="85"></a>
+										  <a href=""><img src="images/product-details/3.jpg" alt=""width="84" height="85"></a>
 										</div>
 										
 									</div>
@@ -212,7 +267,6 @@
 									<i class="fa fa-angle-right"></i>
 								  </a>
 							</div>
-
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
@@ -222,13 +276,15 @@
 								<img src="images/product-details/rating.png">
 								<span>
 									<span> 59K</span>
-									<label>Chất Lượng:</label>
-									<input type="text" value="3">
+									<img src="images/product-details/like.png" id="like" hinh=<%= dangxem%> width="50px" height="50px"><%=like%>
+									<img src="images/product-details/dislike.png" id="dislike" hinh=<%= dangxem%> width="50px" height="50px"><%=dislike%>
+									
 									<button type="button" class="btn btn-fefault cart">
 										<em class="fa fa-shopping-cart"></em>
 										Thêm vào giỏ 
 									</button>
 								</span>
+								
 								<a><img src="images/product-details/share.png" class="share img-responsive"></a>
 							</div><!--/product-information-->
 						</div>
@@ -239,11 +295,62 @@
 					<!--/recommended_items-->
 					
 				</div>
+
+				<div class="form-group col-md-12">
+					<textarea name="message" id="message" required class="form-control" rows="8" placeholder="Your Message Here"></textarea>
+					<button type="submit" class="btn">Send</button>
+				</div>  
 			</div>
 		</div>
 	</section>
 	
 	<footer id="footer"><!--Footer-->
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="single-widget">
+							<h2>SHOP THỜI TRANG ONLINE </h2>
+							<h2><i class="fa fa-location-arrow"></i> VP:Tầng 16 - CC Phú Đạt - Đường D5 - P 25 - Q.Bình Thạnh TP.HCM</h2>
+							<h2><i class="fa fa-phone"></i>0933222836</h2>
+							<h2><i class="fa fa-mail-forward"></i>Mail</h2>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>chính sách bảo mật</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">chính sách đổi trả</a></li>
+								<li><a href="#">chính sách bảo hành </a></li>
+								<li><a href="#">chính sách thanh toán</a></li>
+								<li><a href="#">chính sách vận chuyển</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2> Hướng dẫn mua hàng </h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">chính sách đổi trả</a></li>
+								<li><a href="#">chính sách bảo hành </a></li>
+								<li><a href="#">chính sách thanh toán</a></li>
+								<li><a href="#">chính sách vận chuyển</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2> <a href="https://www.facebook.com/son.vuong.7505"> Facebook</a></h2>
+							<img src="images/shop/facebook.png" width="270">
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">

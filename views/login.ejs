@@ -63,7 +63,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-user"></i> Đăng Kí</a></li>
+								<li><a href="http://localhost:3000/singin"><i class="fa fa-user"></i> Đăng Kí</a></li>
 								<li><a href="http://localhost:3000/login"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
 							</ul>
 						</div>
@@ -89,7 +89,7 @@
 								<li><a href="http://localhost:3000/" class="active">Trang Chủ</a></li>
 								<li class="dropdown"><a href="#" class="active">Cửa Hàng <i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-										<li><a href="http://localhost:3000/chitiet" class="active">Chi tiết Sản Phẩm</a></li>   
+										<li><a href="http://localhost:3000/chitiet/1" class="active">Chi tiết Sản Phẩm</a></li>   
 										<li><a href="http://localhost:3000/login" class="active">Đăng Nhập </a></li> 
                                     </ul>
                                 </li>  
@@ -117,8 +117,8 @@
 					<div class="login-form"><!--login form-->
 						<h2>Đăng nhập tài khoản của bạn </h2>
 						<form class="" action="/login" method="post">
-							<input type="text" placeholder="User name" name="username"/>
-							<input type="password" placeholder="Password" name="password" />
+							<input type="text" placeholder="User name" name="username" id="username"/>
+							<input type="password" placeholder="Password" name="password" id="password"/>
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Lưu đăng nhập 
@@ -191,7 +191,29 @@
 	</footer><!--/Footer-->
 	
 
-  
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+        $(document).ready(function(){
+            var username, password;
+            $("#submit").click(function(){
+                username = $("#username").val();
+                password = $("#password").val();
+                // Basic jQuery RESTFul API call
+                $.post("http://localhost:3000/login", {
+                    username: username,
+                    pass: password
+                }, function(data) {
+
+                    // check the returned data, will return 'done' when completed     
+                    if(data==='done') {
+
+                        // redirect to admin page
+                        window.location.href="/admin1";
+                    }
+                });
+            });
+        });
+    </script>
     <script src="js/jquery.js"></script>
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>

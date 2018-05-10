@@ -34,6 +34,7 @@
 	
 	<script>
 		function openCity(evt, cityName) {
+			$("#mauao").hide();
 			var i, tabcontent, tablinks;
 			tabcontent = document.getElementsByClassName("tabcontent");
 			for (i = 0; i < tabcontent.length; i++) {
@@ -142,9 +143,12 @@
 			}
 			linkElement.href = myImage.src ;
 		}
-	</script>
 
-// Get the modal
+		$(".button").click(function(){
+			$("mauao").hide();
+		});
+
+	</script>
 </head>
 
 <body>
@@ -186,7 +190,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-							  <li><a class="login-checkout-account"><em class="fa fa-user"></em> Tài Khoản</a></li>
+							  <li><a class="login-checkout-account"><em class="fa fa-user"></em> Đăng kí</a></li>
 							  <li><a href="http://localhost:3000/login" class="login-checkout-account"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
 							</ul>
 						</div>
@@ -207,7 +211,7 @@
 								<li><a href="http://localhost:3000/" class="active">Trang Chủ</a></li>
 								<li class="dropdown"><a href="#" class="active">Cửa Hàng <i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-										<li><a href="http://localhost:3000/chitiet" class="active">Chi tiết Sản Phẩm</a></li>   
+										<li><a href="http://localhost:3000/chitiet/1" class="active">Chi tiết Sản Phẩm</a></li>   
 										<li><a href="http://localhost:3000/login" class="active">Đăng Nhập </a></li> 
                                     </ul>
                                 </li>  
@@ -266,7 +270,7 @@
 		</div>
 	</section><!--/slider-->
 	
-	<section>x
+	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2 col-lg-2">
@@ -294,8 +298,13 @@
 								<div class="single-products"> 
 									<div class="productinfo text-center" >
 										<img class="fish" id="output" height="50" width="50" onMouseMove="divMove()" onMouseUp="mouseUp()" onMouseDown="mouseDown(this)" onClick="addListeners()">
+										<img id="mauao" src="images/home/clothes (4).jpg" height="300" width="200">
+									
+									
 										<img class="tabcontent" src="images/home/clothes (4).jpg" id="hien1" height="300" width="200">
-										<a href="#" onClick="prepHref(this)" download="download">Click here to download image</a>
+										<!--<a href="#" onClick="prepHref(this)" download="download">Click here to download image</a>-->
+										
+										
 										<img class="tabcontent" src="images/home/clothes (7).jpg" id="hien2" height="300" width="200">
 										<img class="tabcontent" src="images/home/clothes (9).jpg" id="hien3" height="300" width="200">
 										<img class="tabcontent" src="images/home/clothes (30).jpg" id="hien4" height="300" width="200">
@@ -336,7 +345,9 @@
 										<img class="tabcontent" src="jpg/400x400/clothes (194).jpg" id="hien21" height="300" width="200">
 										
 										<img class="tabcontent" src="jpg/400x400/clothes (158).jpg" id="hien22" height="300" width="200">
+										
 									</div>
+									
 								</div>
 								
 							</div>
