@@ -21,6 +21,7 @@ var validator = require('express-validator');
 
 var path = require('path');
 
+var u;
 app.set('views','./views'); 
 app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname, 'views')));
@@ -59,9 +60,9 @@ app.get('/singin',function(req,res){
 app.route('/login')
 .get((req, res) => res.render('login'))
 .post(Passport.authenticate('local',{failureRedirect:'/login', // nếu login sai quay vè trang login 
-                                     successRedirect:'/admin'})) // nếu login đúng chuyến tới trang loginOK
+                                     successRedirect:'/admin/index'})) // nếu login đúng chuyến tới trang loginOK
 
-
+                                     
 
 app.post('/login',function(req,res){
 	// Very basic. Set the session e-mail to whatever the user has added.
@@ -81,6 +82,36 @@ app.get('/login',function(req,res){
 	    res.render('/admin');
 	}
 });
+
+app.get('/dathang',function(req,res){
+  res.render('dathang') ; 
+});
+
+app.post("/dathang",urlencodedParser,function(req,res){
+  // gui du lie len server 
+
+  var Ten = req.body.Ten ; 
+  var Sdt = req.body.Sdt ;
+  var Diachi = req.body.Diachi;
+  var Phuong = req.body.Phuong; 
+  var Quan = req.body.Quan; 
+  var Thanhpho = req.body.Thanhpho;
+  pool.connect(function(err,client,done){
+    if(err){
+        return console.error('error fetching client from pool',err)
+    }
+    var sql = 'INSERT INTO "Donhang" ("Ten","Sdt","Diachi","Thanhpho","Quan","Phuong" ) VALUES(' +"'"+Ten+ "'"+ ','+Sdt+',' +"'"+Diachi+ "'" + ',' +"'"+Thanhpho+ "'" + ',' +"'"+Quan+ "'" + ',' +"'"+Phuong+ "'" + ') '
+    client.query(sql, function(err , result){
+      done();
+      if(err){
+        res.end();
+        return console.error('error running query',err);
+      }
+      res.redirect('./');
+    });
+  });
+});
+
 
 app.get('/admin1',function(req,res){
 	if(req.session.use) {
@@ -112,6 +143,7 @@ Passport.use(new LocalStrategy(
             const db =JSON.parse(data)
             const userRecord = db.find(user => user.usr == username)
             if(userRecord && userRecord.pwd == password){
+                u=userRecord;
                 return done(null,userRecord)
             }else{
                 return done(null,false)
@@ -243,10 +275,32 @@ app.get("/admin/blog",function(req,res){
         //res.redirect('/singin') ;
         //res.render("product-details");
 
-        res.render("admin/blog",{data:result});
+        res.render("admin/blog",{data:result,user:u});
     });
   });
 })
+
+
+app.get("/admin/donhang",function(req,res){
+  pool.connect(function(err,client,done){
+    if(err){
+        return console.error('error fetching client from pool',err)
+    } 
+    client.query('SELECT * FROM "Donhang" ', function(err , result){
+        done();
+        if(err){
+            
+            return console.error('error running query',err);
+        }
+        
+        //res.redirect('/singin') ;
+        //res.render("product-details");
+
+        res.render("admin/donhang",{data:result,user:u});
+    });
+  });
+});
+
 
 
 app.post("/singin",urlencodedParser,function(req,res){
@@ -357,7 +411,7 @@ app.get("/admin/index",function(req,res){
         //res.redirect('/singin') ;
         //res.render("product-details");
 
-        res.render("admin/index",{data:result});
+        res.render("admin/index",{data:result,user:u});
     });
   });
 })
@@ -412,7 +466,6 @@ app.post("/admin/add",urlencodedParser,function(req,res){
           });
         });
       }
-      
     }
   })
 });
@@ -430,7 +483,7 @@ app.get("/admin/edit/:id",function(req,res){
           res.end();
           return console.error('error running query',err);
       }
-      res.render("admin/edit",{data:result.rows[0]});
+      res.render("admin/edit",{data:result.rows[0],user:u});
       console.log(result.rows[0]);
     });
   });
@@ -492,15 +545,13 @@ app.get("/chitiet/:id",function(req, res){
             res.end();
             return console.error('error running query',err);
         }
-        console.log();
+        console.log(result);
         //res.redirect('/singin') ;
         //res.render("product-details");
         res.render("product-details",{dangxem:id,hinh:result.rows[0].Hinh,like:result.rows[0].Like,dislike:result.rows[0].Dislike});
     });
   });
 });
-
-
 /************************************Postgress likeee*************************** */
 
 var pool2 = new pg.Pool(config1); 
@@ -531,10 +582,6 @@ app.get("/like/:id",function(req,res){
           });
     });
   }); 
-
-  
-  //res.redirect('/singin') ;
-  //res.render("product-details");
 });
 
 app.get("/dislike/:id",function(req,res){
